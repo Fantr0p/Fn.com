@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>Fn.com [v.1.0]</title>
+  <title>Fn.com [1.1]</title>
   <style>
     body {
       color: #ffffff;
@@ -162,7 +162,7 @@
     <noscript>Enable JavaScript</noscript>
     
     
-    <div class="progress-bar-outer"><div class="progress-bar-inner" id="loading-inner"></div></div>
+    
   </div>
 
   <div id="error" class="screen" hidden>
@@ -203,7 +203,7 @@
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 1280;
       scaffolding.height = 720;
-      scaffolding.resizeMode = "stretch";
+      scaffolding.resizeMode = "preserve-ratio";
       scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
@@ -224,7 +224,7 @@
       scaffolding.setAccentColor("#ff4c4c");
 
       try {
-        scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@Fn.com [v.1.0].sb3"));
+        scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@Fn.com [1.1].sb3"));
       } catch (error) {
         console.error(error);
       }
